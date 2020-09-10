@@ -157,7 +157,7 @@ const getRelatedElements = (id) => {
       }
     }
   };
-
+  
   links.forEach(link => {
     if (link.source.id === id) {
       relatedElements.relatedNodes.push(link.target.id);
@@ -169,6 +169,7 @@ const getRelatedElements = (id) => {
       addTags(link.tags);
     }
   });
+
   return relatedElements;
 };
 
