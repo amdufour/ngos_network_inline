@@ -1,0 +1,9 @@
+.notes-section {
+  opacity: 1;
+  transition-property: opacity;
+  @include easeSineOut;
+  &.hidden {
+    opacity: 0;
+    @include easeSineIn;
+  }
+}

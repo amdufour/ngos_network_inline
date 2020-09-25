@@ -224,8 +224,18 @@ const showInfo = (d) => {
   // Make the info box appear at the right location
   d3.select('#info')
     .classed('visible', true);
+
+  // Hide the following section on mobile for readability
+  if (window.innerWidth <= 768) {
+    d3.select('.notes-section')
+      .classed('hidden', true);
+  }
 };
 
 const hideInfo = () => {
   d3.select('#info').classed('visible', false);
+  if (window.innerWidth <= 768) {
+    d3.select('.notes-section')
+      .classed('hidden', false);
+  }
 };

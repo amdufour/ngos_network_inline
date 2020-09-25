@@ -1,19 +1,20 @@
 .legend-section {
+  .legend-item {
+    margin-bottom: 30px;
+  }
   ul {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
     padding-left: 0;
     list-style: none;
     li {
+      display: block;
       padding-top: 10px;
       padding-bottom: 10px;
+      width: 100%;
     }
   }
   p {
     margin-top: 0;
-  }
-  .legend {
-    margin-bottom: 15px;
   }
 
   // Organizations main color
@@ -24,7 +25,7 @@
       &:before {
         content: '';
         position: absolute;
-        top: 7px;
+        top: 10px;
         left: 0;
         width: 20px;
         height: 20px;
@@ -46,7 +47,7 @@
       padding-left: 33px;
       background-repeat: no-repeat;
       background-size: 25px auto;
-      background-position: 1px 5px;
+      background-position: 1px 8px;
       &.legend-national { background-image: url(../svg/node_national.svg); }
       &.legend-regional { background-image: url(../svg/node_regional.svg); }
       &.legend-global { background-image: url(../svg/node_global.svg); }
@@ -54,7 +55,7 @@
       &.legend-bi-nations { 
         background-image: url(../svg/node_bi-national.svg);
         background-size: 28px auto;
-        background-position: 0 7px;
+        background-position: 0 10px;
       }
     }
   }

@@ -1,7 +1,6 @@
 // Info box
 #info {
-  width: 100%;
-  margin-left: 40px;
+  position: relative;
   background: $white;
   opacity: 0;
   transition-property: opacity;
@@ -9,6 +8,20 @@
   &.visible {
     opacity: 1;
     @include easeSineIn;
+  }
+  @media (max-width: $md) {
+    position: fixed;
+    z-index: -1;
+    width: calc(100vw - 60px);
+    padding: 20px 30px;
+    background: linear-gradient(0deg, rgba($white, 1) 0%, rgba($white, 1) 50%, rgba($white, 0.7) 100%);
+    box-shadow: 0 2px 4px rgba($text, 0.5);
+    &.visible {
+      z-index: 100;
+      bottom: 30px;
+      left: 30px;
+      right: 30px;
+    }
   }
 
   // Header
@@ -44,7 +57,7 @@
     }
   }
   .tags {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   // Body
