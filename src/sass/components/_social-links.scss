@@ -1,0 +1,33 @@
+.social-links {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  text-align: right;
+  li {
+    display: inline-block;
+    margin-left: 20px;
+    &:first-of-type {
+      margin-left: 0;
+    }
+    a {
+      border-bottom: none;
+      .logo-instagram g,
+      .logo-behance g,
+      .logo-linkedin path {
+        transition-property: fill;
+        @include easeSineIn;
+      }
+      &:before {
+        display: none;
+      }
+      &:hover, &:focus {
+        .logo-instagram g,
+        .logo-behance g,
+        .logo-linkedin path {
+          fill: $pistachio;
+          @include easeSineOut;
+        }
+      }
+    }
+  }
+}
