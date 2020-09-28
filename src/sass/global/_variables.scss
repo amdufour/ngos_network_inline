@@ -10,7 +10,7 @@ $container: $lg;
 $white: #FBFDFE;
 $grey: #727A87;
 $greyDark: #5E6570;
-$greyPale: #C2C3C7;
+$greyPale: darken($white, 4%);
 
 $bg: $white;
 $text: #1F2933;

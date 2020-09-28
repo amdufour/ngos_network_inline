@@ -14,7 +14,7 @@
 
 #network {
   height: 815px;
-  background-color: darken($white, 3%);
+  background-color: $greyPale;
   @media (max-width: $lg) {
     height: 665px;
   }

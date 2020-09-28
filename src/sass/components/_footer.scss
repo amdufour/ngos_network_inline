@@ -6,7 +6,7 @@ footer {
 
   .footer-content {
     h2 {
-      margin-bottom: 40px;
+      margin-bottom: 52px;
     }
     p {
       max-width: 189px;
@@ -15,7 +15,7 @@ footer {
     .btn {
       display: inline-block;
       width: 120px;
-      margin-top: 20px;
+      margin-top: 40px;
       margin-right: 20px;
       padding: 1rem 1.5rem;
       color: $white;
@@ -32,8 +32,21 @@ footer {
 
   .footer-bottom {
     margin-top: 100px;
+    .icons,
     .copyright {
       font-size: 1.3rem;
+    }
+    .icons {
+      a {
+        color: $white;
+        border-bottom: 1px solid $white;
+        &:hover, &:focus {
+          color: $pistachio;
+          border-bottom: 1px solid $pistachio;
+        }
+      }
+    }
+    .copyright {
       text-align: right;
       @media (max-width: $md) {
         margin-top: 100px;
