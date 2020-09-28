@@ -31,10 +31,11 @@ footer {
   }
 
   .footer-bottom {
-    margin-top: 100px;
+    margin-top: 150px;
     .icons,
     .copyright {
       font-size: 1.3rem;
+      line-height: 1.2;
     }
     .icons {
       a {
@@ -45,11 +46,21 @@ footer {
           border-bottom: 1px solid $pistachio;
         }
       }
+      @media (max-width: $md) {
+        margin-bottom: 8px;
+        margin-left: 2px;
+        a {
+          border-bottom: none;
+          text-decoration: underline;
+          &:hover, &:focus {
+            border-bottom: none;
+          }
+        }
+      }
     }
     .copyright {
       text-align: right;
       @media (max-width: $md) {
-        margin-top: 100px;
         text-align: left;
       }
     }
