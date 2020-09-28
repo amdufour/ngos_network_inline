@@ -3,7 +3,6 @@
 /**********************************************/
 
 const highlightElements = (id, selected) => {
-  console.log('in highlightElements');
   let relatedElements = getRelatedElements(id);
 
   if (selected) {
@@ -188,6 +187,10 @@ document.addEventListener('click', (e) => {
     highlightedNodes = [];
     unhighlightElements();
     d3.select('#action').classed('visible', false);
+
+    if (d3.select('#info').classed('visible', true)) {
+      hideInfo();
+    }
   }
 });
 

@@ -66,7 +66,6 @@ d3.selectAll('g.node')
         hideInfo();
       })
       .on('click, touchend', d => {
-        console.log('click');
         isActiveElement = true;
         highlightElements(d.id, true);
         addBackgroundCircle(d.id, getRadius(d.estimated_people_impacted));
