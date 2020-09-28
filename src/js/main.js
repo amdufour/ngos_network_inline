@@ -54,6 +54,7 @@ d3.selectAll('g.node')
   .data(nodes)
   .join('g')
   .on('mouseenter', d => {
+        console.log('mouse enter');
         d3.event.stopPropagation();
         isActiveElement ? highlightNode(d.id) : highlightElements(d.id, false);
         showInfo(d);
@@ -64,10 +65,14 @@ d3.selectAll('g.node')
           : unhighlightElements();
         hideInfo();
       })
-      .on('click', d => {
+      .on('click, touchend', d => {
+        console.log('click');
         isActiveElement = true;
         highlightElements(d.id, true);
         addBackgroundCircle(d.id, getRadius(d.estimated_people_impacted));
+        if (window.innerWidth <= 768) {
+          showInfo(d);
+        }
       });
 
 // Append legend

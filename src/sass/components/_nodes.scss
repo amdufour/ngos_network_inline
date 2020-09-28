@@ -11,3 +11,20 @@
     opacity: 1;
   }
 }
+
+#network {
+  height: 815px;
+  background-color: darken($white, 3%);
+  @media (max-width: $lg) {
+    height: 665px;
+  }
+  @media (max-width: $md) {
+    height: 504px;
+  }
+  @media (max-width: $sm) {
+    height: 562px;
+  }
+  @media (max-width: 375px) {
+    height: 408px;
+  }
+}

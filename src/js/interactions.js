@@ -3,6 +3,7 @@
 /**********************************************/
 
 const highlightElements = (id, selected) => {
+  console.log('in highlightElements');
   let relatedElements = getRelatedElements(id);
 
   if (selected) {
@@ -239,3 +240,6 @@ const hideInfo = () => {
       .classed('hidden', false);
   }
 };
+
+// Pan and Zoom svg
+svgPanZoom('#network');
