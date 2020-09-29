@@ -14,7 +14,8 @@
 
 #network {
   height: 815px;
-  background-color: $greyPale;
+  border: 1px solid darken($white, 5%);;
+  border-radius: $radius;
   @media (max-width: $lg) {
     height: 665px;
   }
